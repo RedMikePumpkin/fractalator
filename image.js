@@ -17,10 +17,8 @@ functions.image = async (canv, rx, ry, rw, rh, del) => {
   for (var x = 0; x < pxw; x++) {
     for (var y = 0; y < pxh; y++) {
       var xp = rx + (x * rw / pxw);
-      var yp = ry + rh - (y * rh / pxh);
-      pixeldata = image__ctx
-      .getImageData(
-        Math.floor(xp), Math.floor(yp), 1, 1
+      var yp = ry + (y * rh / pxh);
+      pixeldata = image__ctx.getImageData(Math.floor(xp), Math.floor(yp), 1, 1
       ).data;
       ctx.fillStyle = "rgba(" +
         pixeldata[0].toString() + ", " +
