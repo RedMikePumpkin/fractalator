@@ -6,7 +6,7 @@ image__loadedImage.onload = () => {
   image__imageCanvas.height = image__loadedImage.height;
   image__ctx.drawImage(image__loadedImage, 0, 0);
 }
-image__loadedImage.src = "./image.png";
+image__loadedImage.src = "./image2.png";
 
 functions.image = async (canv, rx, ry, rw, rh, del) => {
   var ctx = canv.getContext("2d");
