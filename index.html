@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fractalator</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1>Fractalator</h1>
+    width:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="x-size" value="320" autocomplete="off" spellcheck="false"><br>
+    height:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="y-size" value="320" autocomplete="off" spellcheck="false"><br>
+    scale-down:&nbsp;&nbsp;<input type="number" id="scale" value="1" autocomplete="off" spellcheck="false"><br>
+    split:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="split" value="2" autocomplete="off" spellcheck="false"><br>
+    delay:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="delay" value="2000" autocomplete="off" spellcheck="false"><br>
+    area width:&nbsp;&nbsp;<input type="number" id="areaw" value="6" autocomplete="off" spellcheck="false"><br>
+    area height:&nbsp;<input type="number" id="areah" value="6" autocomplete="off" spellcheck="false"><br>
+    area x:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="areax" value="0.5" autocomplete="off" spellcheck="false"><br>
+    area y:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="areay" value="0" autocomplete="off" spellcheck="false"><br>
+    function:&nbsp;&nbsp;&nbsp;&nbsp;<select id="function">
+      <option value="grid">Grid</option>
+      <option value="gradient">Gradient</option>
+      <option value="mandelbrot">Mandelbrot set</option>
+      <option value="mandelbrotfast">Mandelbrot set (fast)</option>
+    </select><br>
+    <button id="generate">Generate!</button><br>
+    <div id="canvbox">
+
+    </div><br>
+    output:<br><img id="outimg"></img>
+    <script src="render.js"></script>
+    <script src="grid.js"></script>
+    <script src="mandelbrot.js"></script>
+  </body>
+</html>

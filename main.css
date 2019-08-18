@@ -1,0 +1,41 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: monospace;
+}
+
+input, select, button {
+  outline: none;
+  border: 1px solid #fff;
+  background-color: #222;
+  color: #fff;
+  display: inline-block;
+  padding: 1px 1px;
+}
+
+#canvbox {
+  background-color: #111;
+  display: inline-block;
+  min-width: 10em;
+  min-height: 10em;
+}
+
+canvas {
+  width: 20em;
+  background-color: #222;
+  margin: 0.2em;
+}
+
+img {
+  width: 40em;
+  margin: 0.2em;
+}
+
+canvas, img {
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
