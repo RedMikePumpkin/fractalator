@@ -2,12 +2,13 @@ var image__loadedImage = new Image();
 var image__imageCanvas = document.createElement("canvas");
 var image__ctx = image__imageCanvas.getContext("2d");
 
-function image__load(file) {
+async function image__load(file) {
   return new Promise(yey => {
     image__loadedImage.onload = () => {
       image__imageCanvas.width = image__loadedImage.width;
       image__imageCanvas.height = image__loadedImage.height;
       image__ctx.drawImage(image__loadedImage, 0, 0);
+      yey();
     }
     image__loadedImage.src = file;
   });
