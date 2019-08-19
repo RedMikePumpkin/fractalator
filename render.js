@@ -18,7 +18,8 @@ h_id("generate").onclick = () => {
   var camw = parseFloat(h_id("areaw").value);
   var camh = parseFloat(h_id("areah").value);
   var camx = parseFloat(h_id("areax").value);
-  var camy = parseFloat(h_id("areay").value);;
+  var camy = parseFloat(h_id("areay").value);
+  var params = h_id("params").value;
   var rangew = (camw/2) / split;
   var rangeh = (camh/2) / split;
   for (var i = 0, imax = canvases.length; i < imax; i++) {
@@ -45,7 +46,7 @@ h_id("generate").onclick = () => {
     for (var x = 0, xmax = split; x < xmax; x++) {
       for (var y = 0, ymax = split; y < ymax; y++) {
         if (functions[funct]) {
-          await functions[funct](canvases[1], x * rangew - camw/4 - camx, (y+1) * -rangeh + camh/4 - camy, rangew, rangeh, delay);
+          await functions[funct](canvases[1], x * rangew - camw/4 - camx, (y+1) * -rangeh + camh/4 - camy, rangew, rangeh, delay, params);
         }
         ctx2.save();
         ctx2.scale(1 / scale, 1 / scale);
