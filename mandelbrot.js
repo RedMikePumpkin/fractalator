@@ -9,7 +9,7 @@ functions.mandelbrot = async (canv, rx, ry, rw, rh, del) => {
       // (a + bi) * (a + bi)
       // a^2 + 2abi - b^2
       if ((px*px+py*py) > 4) {
-        return "rgb(0, 0, " + Math.max(Math.pow(i / imax, 0.333), 0.125) * 256 + ")";
+        return "rgb(0, 0, " + Math.max(Math.pow((i / 200) % 1, 0.333), 0.125) * 256 + ")";
       }
       npx = px * px - py * py + x;
       py = 2 * px * py + y;
