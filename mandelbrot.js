@@ -8,12 +8,12 @@ functions.mandelbrot = async (canv, rx, ry, rw, rh, del) => {
       // (a + bi)^2
       // (a + bi) * (a + bi)
       // a^2 + 2abi - b^2
-      npx = px * px - py * py + x;
-      py = 2 * px * py + y;
-      px = npx;
       if ((px*px+py*py) > 4) {
         return "rgb(0, 0, " + Math.max(Math.pow(i / imax, 0.333), 0.125) * 256 + ")";
       }
+      npx = px * px - py * py + x;
+      py = 2 * px * py + y;
+      px = npx;
     }
     return "#000";
   });
@@ -38,13 +38,13 @@ functions.mandelbrotfast = async (canv, rx, ry, rw, rh, del) => {
         // (a + bi)^2
         // (a + bi) * (a + bi)
         // a^2 + 2abi - b^2
-        mth_npx = mth_px * mth_px - mth_py * mth_py + xp;
-        mth_py = 2 * mth_px * mth_py + yp;
-        mth_px = mth_npx;
         if ((mth_px*mth_px+mth_py*mth_py) > 4) {
           ctx.fillStyle = "rgb(0, 0, " + Math.max(Math.pow(mth_i / mth_imax, 0.333), 0.125) * 256 + ")";
           break;
         }
+        mth_npx = mth_px * mth_px - mth_py * mth_py + xp;
+        mth_py = 2 * mth_px * mth_py + yp;
+        mth_px = mth_npx;
       }
       ctx.fillRect(x, y, 1, 1);
       i++
