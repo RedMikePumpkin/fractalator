@@ -39,7 +39,7 @@ functions.mandelbrotfast = async (canv, rx, ry, rw, rh, del) => {
         // (a + bi) * (a + bi)
         // a^2 + 2abi - b^2
         if ((mth_px*mth_px+mth_py*mth_py) > 4) {
-          ctx.fillStyle = "rgb(0, 0, " + Math.max(Math.pow(mth_i / mth_imax, 0.333), 0.125) * 256 + ")";
+          ctx.fillStyle = "rgb(0, 0, " + Math.max(Math.pow((mth_i / 200) % 1, 0.333), 0.125) * 256 + ")";
           break;
         }
         mth_npx = mth_px * mth_px - mth_py * mth_py + xp;
