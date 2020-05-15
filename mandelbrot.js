@@ -1,9 +1,9 @@
-functions.mandelbrot = async (canv, rx, ry, rw, rh, del) => {
+functions.mandelbrot = async (canv, rx, ry, rw, rh, del, param) => {
   return functions.base(canv, rx, ry, rw, rh, del, (x, y) => {
     var px = x;
     var py = y;
     var npx;
-    for (var i = 0, imax = 200; i < imax; i++) {
+    for (var i = 0, imax = parseFloat(param); i < imax; i++) {
       // quicc algebra
       // (a + bi)^2
       // (a + bi) * (a + bi)
@@ -20,7 +20,7 @@ functions.mandelbrot = async (canv, rx, ry, rw, rh, del) => {
 }
 
 
-functions.mandelbrotfast = async (canv, rx, ry, rw, rh, del) => {
+functions.mandelbrotfast = async (canv, rx, ry, rw, rh, del, param) => {
   var ctx = canv.getContext("2d");
   var pxw = canv.width;
   var pxh = canv.height;
@@ -33,7 +33,7 @@ functions.mandelbrotfast = async (canv, rx, ry, rw, rh, del) => {
       var mth_py = yp;
       var mth_npx;
       ctx.fillStyle = "#000";
-      for (var mth_i = 0, mth_imax = 200; mth_i < mth_imax; mth_i++) {
+      for (var mth_i = 0, mth_imax = parseFloat(param); mth_i < mth_imax; mth_i++) {
         // quicc algebra
         // (a + bi)^2
         // (a + bi) * (a + bi)
